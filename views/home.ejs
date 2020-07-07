@@ -1,0 +1,28 @@
+<%- include('partials/header'); -%>
+
+<h1>Write your goals here</h1>
+<p><%= homeStartingContent %></p>
+<form action="/compose">
+    <button class="btn btn-primary btn-lg" type="submit" name="button">Compose</button>
+</form>
+<hr />
+
+
+<% posts.forEach(function(entry) { %>
+  <h1><%= entry.title %></h1>
+<div class='grey'>
+  <p><b>Written by: </b> <%= entry.name%></p>
+  <p><b>Date and Time: </b><%= entry.day%></p>
+</div>
+<% var str = entry.blog; %>
+<% var res = str.substring(0, 100); %>
+
+<% if (res.length > 50) { %>
+  <p><%= res %>...<a href="/posts/<%= entry.title %>">Read More</a></p>
+<% } else { %>
+  <p><%= res %></p>
+<% } %>
+
+<% }); %>
+
+<%- include('partials/footer'); -%>

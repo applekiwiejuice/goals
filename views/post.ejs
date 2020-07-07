@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+  <hr />
+  <h1><%= title %></h1>
+  <div class='grey'>
+  <p><b>Written by: </b> <%= name %></p>
+  <p><b>Date and Time: </b><%= day %></p>
+  </div>
+  <p class='container'><%= blog %> </p>
+  <form action="/">
+      <button class="btn btn-primary" type="submit" name="button">Back</button>
+  </form>
+
+<%- include('partials/footer'); -%>
