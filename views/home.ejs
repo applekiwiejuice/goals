@@ -3,12 +3,12 @@
 <h1>Write your goals here</h1>
 <p><%= homeStartingContent %></p>
 <form action="/compose">
-    <button class="btn btn-primary btn-lg" type="submit" name="button">Compose</button>
+    <button class="btn btn-primary btn-lg" type="submit">Compose</button>
 </form>
-<hr />
 
 
 <% posts.forEach(function(entry) { %>
+  <hr />
   <h1><%= entry.title %></h1>
 <div class='grey'>
   <p><b>Written by: </b> <%= entry.name%></p>

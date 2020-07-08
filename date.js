@@ -8,7 +8,7 @@ return day;
 exports.getDay = function() {
 const options = {weekday: 'long'};
 const today = new Date();
-const day = today.toLocaleDateString("en-US",options);
+const day = today.toLocaleDateString('en-PH',options);
 return day;
 }
 
